@@ -58,6 +58,7 @@ app.use(cors());
             if (stocks.length === 0) {
                 return res.status(404).json({ message: "Nenhum dado encontrado." });
             }
+            console.log("==== GETED STOCKS ====")
             res.status(200).json({ stocks });
         } catch (error) {
             console.error("Erro ao buscar dados no banco", error);
