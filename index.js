@@ -50,15 +50,27 @@ app.use(cors());
         }
     });
 
+    app.get("/stock/:id", async (req, res) => {
+        try {
+            const { id } = req.params; 
+            const stock = await Stock.findById(id);
+            if (!stock) {
+                return res.status(404).json({ message: "Ação não encontrada." });
+            }
+            res.status(200).json({ stock });
+        } catch (error) {
+            console.error("Erro ao buscar dados no banco", error);
+            res.status(500).json({ message: "Erro ao buscar dados no banco." });
+        }
+    });
 
     app.get("/stocks", async (req, res) => {
         try {
-            const stocks = await Stock.find({});
+            const stocks = await Stock.find({}).sort({ createdAt: -1 });
 
             if (stocks.length === 0) {
                 return res.status(404).json({ message: "Nenhum dado encontrado." });
             }
-            console.log("==== GETED STOCKS ====")
             res.status(200).json({ stocks });
         } catch (error) {
             console.error("Erro ao buscar dados no banco", error);
