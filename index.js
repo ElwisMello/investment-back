@@ -19,12 +19,11 @@ const tags = [
     "CLSC3", "TTEN3", "CSMG3", "TAEE11", "RECV3",
     "BRSR5", "BEEF3", "CSAN3", "ABEV3", "STBP3",
     "WEGE3", "BRFS3", "MYPK3", "JBSS3", "TUPY3",
-    "AZUL4", "MULT3", "B3SA3", "ELET5", "UGPA3",
+     "MULT3", "B3SA3", "ELET5", "UGPA3", "BRBI11",
     "CPLE5", "RAIZ4", "SOJA3", "SLCE3", "SHUL4",
     "TASA3", "AURE3", "SUZB3", "VIVT3", "EMBR3",
     "RANI3", "BBDC3", "IGTA3", "AGRO3", "KLBN11",
     "ROMI3", "ALOS3", "JALL3", "FESA4", "USIM5",
-    "BRBI11"
 ];
 
 const PORT = 3003;
